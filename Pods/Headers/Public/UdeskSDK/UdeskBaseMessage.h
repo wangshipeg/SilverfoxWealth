@@ -1,0 +1,1 @@
+../../../UdeskSDK/UdeskSDK/UDChatMessage/UDIM/Models/Messages/UdeskBaseMessage.h

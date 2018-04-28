@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2L-ax-Nhv">
+                    <rect key="frame" x="18" y="360" width="444" height="120"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v3.5.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74Q-f9-1Cv">
+                            <rect key="frame" x="197" y="91" width="50" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="DUu-OH-7xW"/>
+                                <constraint firstAttribute="width" secondItem="74Q-f9-1Cv" secondAttribute="height" multiplier="47:21" id="L9a-M6-w2s"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="L9a-M6-w2s"/>
+                                </mask>
+                            </variation>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="font_Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="B62-vF-zbj">
+                            <rect key="frame" x="132" y="25" width="180" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="180" id="Eja-kF-iMj"/>
+                                <constraint firstAttribute="height" constant="46" id="GoS-cj-QCY"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="74Q-f9-1Cv" firstAttribute="leading" secondItem="d2L-ax-Nhv" secondAttribute="leading" constant="197" id="1PZ-Ep-0tF"/>
+                        <constraint firstItem="B62-vF-zbj" firstAttribute="centerX" secondItem="74Q-f9-1Cv" secondAttribute="centerX" id="6Ei-UF-Plb"/>
+                        <constraint firstAttribute="trailing" secondItem="B62-vF-zbj" secondAttribute="trailing" constant="132" id="mhM-dj-kGg"/>
+                        <constraint firstItem="74Q-f9-1Cv" firstAttribute="bottom" secondItem="d2L-ax-Nhv" secondAttribute="bottomMargin" id="sOH-EA-oH2"/>
+                        <constraint firstItem="74Q-f9-1Cv" firstAttribute="top" secondItem="B62-vF-zbj" secondAttribute="bottom" constant="20" id="uiL-d9-ZkK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="d2L-ax-Nhv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Wo3-Gd-tt2"/>
+                <constraint firstItem="d2L-ax-Nhv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="360" id="ope-Tw-CD4"/>
+                <constraint firstAttribute="bottom" secondItem="d2L-ax-Nhv" secondAttribute="bottom" id="r5t-D0-gNQ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="491" y="439"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="font_Logo.png" width="197" height="50"/>
+    </resources>
+</document>

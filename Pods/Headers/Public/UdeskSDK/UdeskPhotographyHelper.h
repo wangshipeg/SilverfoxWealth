@@ -1,0 +1,1 @@
+../../../UdeskSDK/UdeskSDK/UDChatMessage/UDTools/UDHelper/UdeskPhotographyHelper.h
