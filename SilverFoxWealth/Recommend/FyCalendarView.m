@@ -186,9 +186,7 @@
         
         // this month
         if ([self month:date] == [self month:[NSDate date]]) {
-            
-            NSInteger todayIndex = [self day:date] + firstWeekday - 1;
-            
+            NSInteger todayIndex = [self day:date] + firstWeekday - 1;            
             if (i < todayIndex && i >= firstWeekday) {
                 //                [self setStyle_BeforeToday:dayButton];
             }else if(i ==  todayIndex){

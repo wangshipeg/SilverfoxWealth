@@ -221,15 +221,19 @@
         _dayStr = [strTime substringFromIndex:6];
         [_mutableArr addObject:_dayStr];
     }
-    //获取当前时间，日期
+
     NSString *currentTime = [[SCMeasureDump shareSCMeasureDump].nowTime substringToIndex:10];
     NSString *dateString = [currentTime stringByReplacingOccurrencesOfString:@"-" withString:@""];
     NSString *currentDayDate = [dateString substringFromIndex:6];
     
     NSMutableArray *dayDateArr = [NSMutableArray array];
-    for (int i = [currentDayDate intValue] - 1; i > 0; i --) {
-        NSString *dayDate = [NSString stringWithFormat:@"%02d",i];
-        [dayDateArr addObject:dayDate];
+    if ([currentDayDate intValue] == 1) {
+        [dayDateArr addObject:currentDayDate];
+    }else{
+        for (int i = [currentDayDate intValue] - 1; i > 0; i --) {
+            NSString *dayDate = [NSString stringWithFormat:@"%02d",i];
+            [dayDateArr addObject:dayDate];
+        }
     }
     
     NSMutableSet *set1 = [NSMutableSet setWithArray:dayDateArr];

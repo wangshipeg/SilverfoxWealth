@@ -245,7 +245,7 @@
 //    btn.layer.cornerRadius = btn.frame.size.height / 2;
 //    btn.layer.masksToBounds = YES;
     [btn setTitleColor:[UIColor characterBlackColor] forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor zheJiangBusinessRedColor] forState:UIControlStateSelected];
+    //[btn setTitleColor:[UIColor zheJiangBusinessRedColor] forState:UIControlStateSelected];
     UILabel *label = [[UILabel alloc] init];
     [self addSubview:label];
     label.backgroundColor = [UIColor yellowSilverfoxColor];
