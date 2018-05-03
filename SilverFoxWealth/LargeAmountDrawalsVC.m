@@ -85,7 +85,7 @@
         AddBankCardCell *cell=[[AddBankCardCell alloc] initWithTitle:@"可用资产" inputTF:_usableAssetTF leftViewWidth:90];
         _usableAssetTF.textColor = [UIColor zheJiangBusinessRedColor];
         if (_balanceStr) {
-            _usableAssetTF.text = [NSString stringWithFormat:@"%.2f元",floor([_balanceStr doubleValue] *100) / 100];
+            _usableAssetTF.text = [NSString stringWithFormat:@"%@元",[StringHelper roundValueToDoubltValue:_balanceStr]];
         }
         cell.selectionStyle =UITableViewCellSelectionStyleNone;
         return cell;

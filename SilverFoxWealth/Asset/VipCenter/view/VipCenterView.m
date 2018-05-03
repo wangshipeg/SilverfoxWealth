@@ -173,7 +173,6 @@ static NSInteger currentVipLevel;
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 2) {
-//        MembershipBenefitsCell *cell = (MembershipBenefitsCell *)[collectionView cellForItemAtIndexPath:indexPath];
         if (indexPath.item != 8) {
             NewHTMLVC *html = [[NewHTMLVC alloc] init];
             switch (indexPath.item) {

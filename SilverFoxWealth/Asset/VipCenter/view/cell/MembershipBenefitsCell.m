@@ -20,7 +20,6 @@
         [self.iconImgView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self).with.offset(15*default_scale);
             make.centerX.mas_equalTo(self.mas_centerX);
-//            make.centerY.mas_equalTo(self.mas_centerY).with.offset(-5*default_scale);
             make.size.mas_equalTo(CGSizeMake(44*default_scale, 44*default_scale));
         }];
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -59,38 +58,26 @@
         NSString *level = obj[@"level"];
         if ([level integerValue] == self.level) {
             if ([_keyWord1 isEqualToString:@"count"] || [_keyWord1 isEqualToString:@"isExist"]) {
-                if ([obj[_keyWord1] isEqualToString:@"0"]) {
-                    self.isFree = NO;
-                }else {
-                    self.isFree = YES;
-                }
+                self.isFree = [obj[_keyWord1] isEqualToString:@"0"] ? NO : YES;
+                break;
             }
             if ([_keyWord1 isEqualToString:@"money"]) {
                 double b = 0.0;
-                if ([obj[_keyWord1] doubleValue] == b) {
-                    self.isFree = NO;
-                }else {
-                    self.isFree = YES;
-                }
+                self.isFree = [obj[_keyWord1] doubleValue] == b ? NO : YES;
+                break;
             }
             if ([_keyWord1 isEqualToString:@"rate"]) {
                 double b = 0.0;
                 if ([_keyWord isEqualToString:@"discount"]) {
                     b = 10.0;
                 }
-                if ([obj[_keyWord1] doubleValue] == b) {
-                    self.isFree = NO;
-                }else {
-                    self.isFree = YES;
-                }
+                self.isFree = [obj[_keyWord1] doubleValue] == b ? NO : YES;
+                break;
             }
             if ([_keyWord1 isEqualToString:@"type"]) {
                 NSString *type = obj[_keyWord1];
-                if (type.length == 0) {
-                    self.isFree = NO;
-                }else {
-                    self.isFree = YES;
-                }
+                self.isFree = type.length == 0 ? NO : YES;
+                break;
             }
         }
     }
